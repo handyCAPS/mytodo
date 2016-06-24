@@ -1,0 +1,11 @@
+{
+    "pages": [
+        {
+            "header": "First Header",
+            "textMain": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, asperiores.",
+            "imgBackground": {
+                "url": "img/someimage.jpg"
+            }
+        }
+    ]
+}
