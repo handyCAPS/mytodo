@@ -10,7 +10,8 @@ module.exports = {
     },
     devServer: {
       inline: true,
-      port: 3333
+      port: 3333,
+      historyApiFallback: true
     },
     module: {
       loaders: [
@@ -24,8 +25,17 @@ module.exports = {
             presets: ['es2015', 'react'],
             cacheDirectory: './.webpack-cache'
         }
+      },
+      // scss
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        exclude: /node_modules/
       }
       ]
+    },
+    sassLoader: {
+      // includePaths: [ path.join(__dirname, 'src/scss')]
     }
 
 };

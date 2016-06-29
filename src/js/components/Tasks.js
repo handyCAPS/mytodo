@@ -1,18 +1,15 @@
 import React from 'react';
 
 const Tasks = React.createClass({
-    getInitialState() {
-        return {
-            tasks: [
-                'Do stuff',
-                'Do some other stuff'
-            ]
-        };
-    },
     render() {
         return (
-            <div>
-                <ul>{this.state.tasks.map(task => {return(<li>{task}</li>)})}</ul>
+            <div className="task">
+                <ul className="task__list">{this.props.tasks.map((task, index) => (
+                    <li
+                        className="task__item"
+                        key={index}
+                        i={index}>{task}<span onClick={this.props.deleteToDo.bind(null, index)} className="closeX">&times;</span></li>
+                    ))}</ul>
             </div>
             );
     }

@@ -1,0 +1,16 @@
+
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    border: none;
+    background-color: $btnColor-main;
+    font-size: modScale(0) + rem;
+    padding: modScale(-1) + em modScale(1) + em;
+    cursor: pointer;
+}
+
+.button__home {
+    margin-right: modScale(1) + rem;
+}

@@ -1,0 +1,16 @@
+
+@function modScale($n, $scale: 1.618, $base: 1) {
+    $result: $base;
+
+    @if ($n > 0) {
+        @for $i from 0 to $n {
+            $result: $result * $scale;
+        }
+    } @else {
+        @for $i from $n to 0 {
+            $result: $result / $scale;
+        }
+    }
+
+    @return $result;
+}
