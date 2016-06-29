@@ -6,8 +6,6 @@ import { browserHistory } from 'react-router';
 
 import rootReducer from './reducers/index';
 
-import getDefaultState from './getDefaultState';
-
 import { getLocalState } from './util/localstorage';
 
 const defaultState = {

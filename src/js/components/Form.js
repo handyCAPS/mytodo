@@ -1,12 +1,19 @@
 
 import React from 'react';
 
+import { browserHistory } from 'react-router';
+
 const Form = React.createClass({
     handleSave(e) {
         e.preventDefault();
-        const newText = this.refs.newtext;
-        this.props.addToDo(newText.value);
+        const newText = this.refs.newtext.value;
+        if (newText.trim() === '') {
+            this.refs.newtext.focus();
+            returnl
+        }
+        this.props.addToDo(newText);
         this.refs.newtextForm.reset();
+        browserHistory.push('/tasks');
     },
     render() {
         return (
@@ -16,7 +23,7 @@ const Form = React.createClass({
                         <label htmlFor="text" className="input-group__label">Text</label>
                         <textarea ref="newtext" name="text" id="" cols="30" rows="10" className="input-group__text-area"></textarea>
                     </p>
-                    <button className="btn btn-large form__button" type="submit" onClick={this.handleSave}>Save</button>
+                    <input className="btn btn-large form__button" type="submit" onClick={this.handleSave} value="Save" />
                 </form>
             </div>
             );
