@@ -9,7 +9,7 @@ import rootReducer from './reducers/index';
 import { getLocalState } from './util/localstorage';
 
 const defaultState = {
-    tasks: getLocalState("state.text")
+    tasks: getLocalState("tasks")
 };
 
 const Store = createStore(rootReducer, defaultState);

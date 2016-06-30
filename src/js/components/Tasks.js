@@ -21,7 +21,7 @@ const Tasks = React.createClass({
                     <Task {...this.props}
                         state={this.state}
                         key={index}
-                        task={task}
+                        task={task.text}
                         index={index}
                         handleEdit={this.handleEdit} />
                     ))}</div>

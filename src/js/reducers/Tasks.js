@@ -1,13 +1,13 @@
 
-import { setLocalState, deleteFromLocalState } from '../util/localstorage';
+import { addToLocalState, deleteFromLocalState } from '../util/localstorage';
 
 function tasks(state = [], action) {
     switch (action.type) {
         case 'ADD_TODO':
-            setLocalState("state.text", action.text);
+            addToLocalState("tasks", {text: action.text});
             return state.concat(action.text);
         case 'DELETE_TODO':
-            deleteFromLocalState("state.text", action.index);
+            deleteFromLocalState("tasks", action.index);
             return state.filter((todo, i) => i !== action.index);
         default:
             return state;

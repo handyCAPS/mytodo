@@ -1,24 +1,22 @@
 
+const stateParent = "state";
 
-export const getLocalState = function(item) {
-    const localState = window.localStorage.getItem(item);
+
+export const getLocalState = function(type) {
+    const localState = window.localStorage.getItem(stateParent);
     let localStateArray = [];
-    if (!!localState) {
-        localStateArray = localState.split(',');
+    if (localState !== null) {
+        localStateArray = JSON.parse(localState)[type];
     }
     return localStateArray;
 };
 
-export const setLocalState = function(item, value) {
-    const localState = window.localStorage.getItem(item);
-    let localStateArray = [];
-    let newState = '';
-    if (!!localState) {
-        localStateArray = localState.split(',');
-    }
-    localStateArray.push(value);
-    newState = localStateArray.join(',');
-    window.localStorage.setItem(item, newState);
+export const addToLocalState = function(type, value) {
+    let localState = JSON.parse(window.localStorage.getItem(stateParent)) || {};
+    if (localState[type] === undefined) { localState[type] = []; }
+    localState[type].push(value);
+    const stateString = JSON.stringify(localState);
+    window.localStorage.setItem(stateParent, stateString);
 };
 
 export const updateLocalState = function (item, index, value) {
@@ -28,13 +26,14 @@ export const updateLocalState = function (item, index, value) {
     return localState;
 };
 
-export const deleteFromLocalState = function(item, index) {
-    let localState = window.localStorage.getItem(item);
-    let newLocalState = localState;
-    if (!!localState) {
-        newLocalState = localState.split(',');
-        newLocalState.splice(index, 1);
+export const deleteFromLocalState = function(type, index) {
+    let localState = window.localStorage.getItem(stateParent);
+    let typeArray = [], stateObject = {};
+    if (localState !== null) {
+        stateObject = JSON.parse(localState);
+        typeArray = stateObject[type];
+        typeArray.splice(index, 1);
+        stateObject[type] = typeArray;
     }
-    window.localStorage.setItem(item, newLocalState.join(','));
-    return localState;
+    window.localStorage.setItem(stateParent, JSON.stringify(stateObject));
 };

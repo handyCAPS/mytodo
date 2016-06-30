@@ -9,7 +9,7 @@ const Form = React.createClass({
         const newText = this.refs.newtext.value;
         if (newText.trim() === '') {
             this.refs.newtext.focus();
-            returnl
+            return;
         }
         this.props.addToDo(newText);
         this.refs.newtextForm.reset();
