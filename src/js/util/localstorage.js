@@ -11,7 +11,14 @@ export const getLocalState = function(item) {
 
 export const setLocalState = function(item, value) {
     const localState = window.localStorage.getItem(item);
-    window.localStorage.setItem(item, localState + ',' + value);
+    let localStateArray = [];
+    let newState = '';
+    if (!!localState) {
+        localStateArray = localState.split(',');
+    }
+    localStateArray.push(value);
+    newState = localStateArray.join(',');
+    window.localStorage.setItem(item, newState);
 };
 
 export const updateLocalState = function (item, index, value) {
@@ -22,12 +29,12 @@ export const updateLocalState = function (item, index, value) {
 };
 
 export const deleteFromLocalState = function(item, index) {
-    console.log('Deleting from localstorage');
     let localState = window.localStorage.getItem(item);
     let newLocalState = localState;
     if (!!localState) {
-        newLocalState = localState.split(',').splice(index, 1).join(',');
+        newLocalState = localState.split(',');
+        newLocalState.splice(index, 1);
     }
-    window.localStorage.setItem(item, newLocalState);
+    window.localStorage.setItem(item, newLocalState.join(','));
     return localState;
 };

@@ -1,15 +1,30 @@
 import React from 'react';
 
+import Task from './Task';
+
 const Tasks = React.createClass({
+    getInitialState() {
+        return {
+            editing: false
+        }
+    },
+    handleEdit() {
+        this.setState({
+            editing: !this.state.editing
+        });
+        console.log('handling edit...');
+    },
     render() {
         return (
             <div className="task">
-                <ul className="task__list">{this.props.tasks.map((task, index) => (
-                    <li
-                        className="task__item"
+                <div className="task__list">{this.props.tasks.map((task, index) => (
+                    <Task {...this.props}
+                        state={this.state}
                         key={index}
-                        i={index}>{task}<span onClick={this.props.deleteToDo.bind(null, index)} className="closeX">&times;</span></li>
-                    ))}</ul>
+                        task={task}
+                        index={index}
+                        handleEdit={this.handleEdit} />
+                    ))}</div>
             </div>
             );
     }

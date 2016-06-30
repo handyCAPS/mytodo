@@ -18,10 +18,17 @@
     vertical-align: top;
 }
 
-.closeX {
+.button--task {
     font-size: modScale(1) + rem;
     position: absolute;
     right: 6px;
-    top: -2px;
     cursor: pointer;
+}
+
+.closeX {
+    top: -2px;
+}
+
+.edit {
+    bottom: 2px;
 }
