@@ -6,7 +6,7 @@ export const getLocalState = function(type) {
     const localState = window.localStorage.getItem(stateParent);
     let localStateArray = [];
     if (localState !== null) {
-        localStateArray = JSON.parse(localState)[type];
+        localStateArray = JSON.parse(localState)[type] || [];
     }
     return localStateArray;
 };

@@ -1,29 +1,48 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import Task from './Task';
 
 const Tasks = React.createClass({
+    componentDidUpdate() {
+
+    },
+    selectAndFocus(input) {
+        const node = ReactDOM.findDOMNode(input);
+        node.focus();
+        node.selectionStart = 0;
+        node.selectionEnd = node.value.length;
+    },
     getInitialState() {
         return {
-            editing: false
-        }
+            editing: {
+                active: false,
+                index: null
+            }
+        };
     },
-    handleEdit() {
+    setEditing(index) {
+        const active = index === this.state.editing.index ? !this.state.editing.active : true;
         this.setState({
-            editing: !this.state.editing
+            editing: {
+                active,
+                index
+            }
         });
-        console.log('handling edit...');
     },
     render() {
         return (
             <div className="task">
                 <div className="task__list">{this.props.tasks.map((task, index) => (
-                    <Task {...this.props}
-                        state={this.state}
+                    <Task
+                        {...this.props}
+                        ref="task"
                         key={index}
-                        task={task.text}
                         index={index}
-                        handleEdit={this.handleEdit} />
+                        task={task}
+                        setEditing={this.setEditing}
+                        selectAndFocus={this.selectAndFocus}
+                        editing={this.state.editing} />
                     ))}</div>
             </div>
             );

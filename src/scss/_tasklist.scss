@@ -5,14 +5,16 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 .task__item {
     position: relative;
+    flex-basis: calc(25% - #{modScale(-1) * 2 + em});
     display: inline-block;
     font-size: 1rem;
     padding: modScale(1) + em;
+    margin: modScale(1) + em modScale(-1) + em;
     border: 1px solid $baseColor;
     width: modScale(6) + rem;
     vertical-align: top;
