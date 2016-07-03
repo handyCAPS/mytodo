@@ -19,11 +19,13 @@ export const addToLocalState = function(type, value) {
     window.localStorage.setItem(stateParent, stateString);
 };
 
-export const updateLocalState = function (item, index, value) {
-    let localState = window.localStorage.getItem(item).split(',');
-    localState[index] = value;
-    window.localStorage.setItem(item, localState.join(','));
-    return localState;
+export const updateLocalState = function(type,index, value) {
+    let localState = JSON.parse(window.localStorage.getItem(stateParent));
+    let localStateArray = localState[type];
+    console.info('local', localStateArray);
+    localStateArray[index].text = value;
+    localState[type] = localStateArray;
+    window.localStorage.setItem(stateParent, JSON.stringify(localState));
 };
 
 export const deleteFromLocalState = function(type, index) {

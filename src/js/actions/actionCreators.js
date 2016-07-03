@@ -8,11 +8,11 @@ export function addToDo(text) {
 }
 
 // Edit todo
-export function editToDo(id, newText) {
+export function editToDo(index, text) {
     return {
         type: 'EDIT_TODO',
-        id,
-        newText
+        index,
+        text
     };
 }
 
