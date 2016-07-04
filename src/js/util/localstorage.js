@@ -19,11 +19,12 @@ export const addToLocalState = function(type, value) {
     window.localStorage.setItem(stateParent, stateString);
 };
 
-export const updateLocalState = function(type,index, value) {
+export const updateLocalState = function(type, index, newObject) {
     let localState = JSON.parse(window.localStorage.getItem(stateParent));
     let localStateArray = localState[type];
-    console.info('local', localStateArray);
-    localStateArray[index].text = value;
+    const oldValue = localStateArray[index];
+    const newValue = {...oldValue, ...newObject}
+    localStateArray[index] = newValue;
     localState[type] = localStateArray;
     window.localStorage.setItem(stateParent, JSON.stringify(localState));
 };

@@ -2,6 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
 const Task = React.createClass({
     getEditTextRef() {
         return "editText" + this.props.index;
@@ -20,20 +23,23 @@ const Task = React.createClass({
         this.props.setEditing(this.props.index);
     },
     setCompleted() {
-        console.info("complete: '", this.props.task);
+        this.props.completeToDo(this.props.index, !this.props.task.completed);
     },
     formatDate(date) {
         const theDate = new Date(date);
-        const theDay = theDate.getDate();
-        const theMonth = theDate.getMonth();
-        const theYear = theDate.getFullYear();
-        const theHours = theDate.getHours();
-        const theMinutes = theDate.getMinutes();
-        const dateString = theDay + '-' + 
-                            theMonth + '-' + 
-                            theYear + ' - ' +
-                            theHours + ':' +
-                            theMinutes;
+        let dateString = '';
+        if (!isNaN(theDate.getMinutes())) {
+            const theDay = theDate.getDate();
+            const theMonth = theDate.getMonth();
+            const theYear = theDate.getFullYear();
+            const theHours = theDate.getHours();
+            const theMinutes = theDate.getMinutes();
+            dateString = theDay + '-' +
+                        theMonth + '-' +
+                        theYear + ' - ' +
+                        theHours + ':' +
+                        theMinutes;
+        }
         return dateString;
     },
     render() {
@@ -45,26 +51,37 @@ const Task = React.createClass({
             setEditing
         } = this.props;
 
+        // if (task.completed) { return null; }
+
         const isEditing = editing.active && (editing.index === index);
         const editTextRef = this.getEditTextRef();
         return (
             <div className="task__item"
                 key={index}
                 i={index}>
-                <p>{ isEditing  || task.text }</p>
+                <ReactCSSTransitionGroup  transitionName="checkmark" transitionEnterTimeout={1300} transitionLeaveTimeout={1300} >
+                { task.completed && (
+                                        <span className="checkmark" key={index}>&#x02713;</span>
+                                    ) }
+                </ReactCSSTransitionGroup>
+                { isEditing  || (<p className="task__text">{task.text}</p>) }
                 { isEditing  &&
                     (
-                        <form ref="editForm" onSubmit={this.handleUpdate}>
-                            <input ref={editTextRef} defaultValue={task.text} type="text" />
-                            <input type="submit" hidden/>
-                        </form>
+                        <div className="task__text">
+                            <form ref="editForm" onSubmit={this.handleUpdate}>
+                                <input ref={editTextRef} defaultValue={task.text} type="text" className="editForm__input" />
+                                <input type="submit" hidden/>
+                            </form>
+                        </div>
                     )
                 }
+                <div className="timestamp">{this.formatDate(task.timestamp)}</div>
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
                 <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
-                <button className="button" onClick={this.setCompleted}>Complete</button>
-                <div className="timestamp">{this.formatDate(task.timestamp)}</div>
+                <div className="complete-wrap">
+                    <button className="btn btn--small task__complete-button" onClick={this.setCompleted}>Complete</button>
                 </div>
+            </div>
             );
     }
 });

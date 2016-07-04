@@ -11,6 +11,11 @@
     cursor: pointer;
 }
 
+.btn--small {
+    font-size: 0.8rem;
+    padding: modScale(-1) + em modScale(0) + em;
+}
+
 .button__home {
     margin-right: modScale(1) + rem;
 }

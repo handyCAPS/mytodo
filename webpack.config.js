@@ -23,6 +23,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
             presets: ['es2015', 'react', 'react-hmre'],
+            plugins: ['transform-object-rest-spread'],
             cacheDirectory: './.webpack-cache'
         }
       },

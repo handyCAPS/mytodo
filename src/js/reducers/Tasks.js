@@ -15,10 +15,19 @@ function tasks(state = [], action) {
             deleteFromLocalState("tasks", action.index);
             return state.filter((todo, i) => i !== action.index);
         case 'EDIT_TODO':
-            updateLocalState("tasks", action.index, action.text);
+            updateLocalState("tasks", action.index, {text: action.text});
             return state.map((taskObject, index) => {
                 if (index === action.index) {
                     taskObject.text = action.text;
+                    return taskObject;
+                }
+                return taskObject;
+            });
+        case 'COMPLETE_TODO':
+            updateLocalState("tasks", action.index, {completed: action.completed});
+            return state.map((taskObject, index) => {
+                if (index === action.index) {
+                    taskObject.completed = action.completed;
                     return taskObject;
                 }
                 return taskObject;

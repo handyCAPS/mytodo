@@ -26,9 +26,10 @@ export function deleteToDo(index) {
     };
 }
 
-export function completeToDo(index) {
+export function completeToDo(index, completed) {
     return {
         type: 'COMPLETE_TODO',
-        index
+        index,
+        completed
     };
 }

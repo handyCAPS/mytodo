@@ -1,0 +1,269 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Gebruiker\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-D',
+1 verbose cli   'react-addons-css-transition-group' ]
+2 info using npm@2.13.4
+3 info using node@v4.0.0
+4 verbose install initial load of C:\wamp\www\mytodo\package.json
+5 warn package.json mytodo@1.0.0 No README data
+6 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel\package.json
+7 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-core\package.json
+8 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-loader\package.json
+9 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-plugin-transform-object-rest-spread\package.json
+10 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-preset-es2015\package.json
+11 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-preset-react\package.json
+12 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\babel-preset-react-hmre\package.json
+13 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\chai\package.json
+14 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\css-loader\package.json
+15 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\jshint\package.json
+16 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\mocha\package.json
+17 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\node-sass\package.json
+18 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\react\package.json
+19 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\react-dom\package.json
+20 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\react-redux\package.json
+21 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\react-router\package.json
+22 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\react-router-redux\package.json
+23 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\redux\package.json
+24 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\sass-loader\package.json
+25 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\style-loader\package.json
+26 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\webpack\package.json
+27 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\webpack-dev-server\package.json
+28 verbose installManyTop reading scoped package data from C:\wamp\www\mytodo\node_modules\whatwg-fetch\package.json
+29 info package.json mocha@2.5.3 No README data
+30 verbose readDependencies loading dependencies from C:\wamp\www\mytodo\package.json
+31 silly cache add args [ 'react-addons-css-transition-group', null ]
+32 verbose cache add spec react-addons-css-transition-group
+33 silly cache add parsed spec Result {
+33 silly cache add   raw: 'react-addons-css-transition-group',
+33 silly cache add   scope: null,
+33 silly cache add   name: 'react-addons-css-transition-group',
+33 silly cache add   rawSpec: '',
+33 silly cache add   spec: '*',
+33 silly cache add   type: 'range' }
+34 silly addNamed react-addons-css-transition-group@*
+35 verbose addNamed "*" is a valid semver range for react-addons-css-transition-group
+36 silly addNameRange { name: 'react-addons-css-transition-group',
+36 silly addNameRange   range: '*',
+36 silly addNameRange   hasData: false }
+37 silly mapToRegistry name react-addons-css-transition-group
+38 silly mapToRegistry using default registry
+39 silly mapToRegistry registry https://registry.npmjs.org/
+40 silly mapToRegistry uri https://registry.npmjs.org/react-addons-css-transition-group
+41 verbose addNameRange registry:https://registry.npmjs.org/react-addons-css-transition-group not in flight; fetching
+42 verbose request uri https://registry.npmjs.org/react-addons-css-transition-group
+43 verbose request no auth needed
+44 info attempt registry request try #1 at 23:25:18
+45 verbose request id 731efed1a04c2e77
+46 http request GET https://registry.npmjs.org/react-addons-css-transition-group
+47 http 200 https://registry.npmjs.org/react-addons-css-transition-group
+48 silly get cb [ 200,
+48 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+48 silly get     etag: '"3NKRGANLRL7NQOBMXIPSF5JU9"',
+48 silly get     'content-type': 'application/json',
+48 silly get     'content-encoding': 'gzip',
+48 silly get     'cache-control': 'max-age=300',
+48 silly get     'content-length': '4575',
+48 silly get     'accept-ranges': 'bytes',
+48 silly get     date: 'Mon, 04 Jul 2016 21:26:14 GMT',
+48 silly get     via: '1.1 varnish',
+48 silly get     age: '0',
+48 silly get     connection: 'keep-alive',
+48 silly get     'x-served-by': 'cache-ams4441-AMS',
+48 silly get     'x-cache': 'HIT',
+48 silly get     'x-cache-hits': '1',
+48 silly get     'x-timer': 'S1467667574.436014,VS0,VE92',
+48 silly get     vary: 'Accept-Encoding' } ]
+49 verbose get saving react-addons-css-transition-group to C:\Users\Gebruiker\AppData\Roaming\npm-cache\registry.npmjs.org\react-addons-css-transition-group\.cache.json
+50 silly addNameRange number 2 { name: 'react-addons-css-transition-group',
+50 silly addNameRange   range: '*',
+50 silly addNameRange   hasData: true }
+51 silly addNameRange versions [ 'react-addons-css-transition-group',
+51 silly addNameRange   [ '0.14.0-beta1',
+51 silly addNameRange     '0.14.0-beta2',
+51 silly addNameRange     '0.14.0-beta3',
+51 silly addNameRange     '0.14.0-rc1',
+51 silly addNameRange     '0.14.0',
+51 silly addNameRange     '0.14.1',
+51 silly addNameRange     '0.14.2',
+51 silly addNameRange     '0.14.3',
+51 silly addNameRange     '0.14.4',
+51 silly addNameRange     '0.14.5',
+51 silly addNameRange     '0.14.6',
+51 silly addNameRange     '0.15.0-alpha.1',
+51 silly addNameRange     '0.14.7',
+51 silly addNameRange     '15.0.0-rc.1',
+51 silly addNameRange     '15.0.0-rc.2',
+51 silly addNameRange     '0.14.8',
+51 silly addNameRange     '15.0.0',
+51 silly addNameRange     '15.0.1',
+51 silly addNameRange     '15.0.2-alpha.1',
+51 silly addNameRange     '15.0.2-alpha.2',
+51 silly addNameRange     '15.0.2-alpha.3',
+51 silly addNameRange     '15.0.2-alpha.4',
+51 silly addNameRange     '15.0.2',
+51 silly addNameRange     '15.0.3-alpha.1',
+51 silly addNameRange     '15.0.3-alpha.2',
+51 silly addNameRange     '15.1.0-alpha.1',
+51 silly addNameRange     '15.1.0',
+51 silly addNameRange     '15.2.0-rc.1',
+51 silly addNameRange     '15.2.0-rc.2',
+51 silly addNameRange     '15.2.0' ] ]
+52 silly addNamed react-addons-css-transition-group@15.2.0
+53 verbose addNamed "15.2.0" is a plain semver version for react-addons-css-transition-group
+54 silly mapToRegistry name react-addons-css-transition-group
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry uri https://registry.npmjs.org/react-addons-css-transition-group
+58 verbose addRemoteTarball https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz',
+59 verbose addRemoteTarball   '3ce3002489fc08705ce77b929bf00376514236ad' ]
+60 info retry fetch attempt 1 at 23:25:18
+61 info attempt registry request try #1 at 23:25:18
+62 http fetch GET https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz
+63 http fetch 200 https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz
+64 silly fetchAndShaCheck shasum 3ce3002489fc08705ce77b929bf00376514236ad
+65 verbose addTmpTarball C:\Users\GEBRUI~1\AppData\Local\Temp\npm-7612-f22a0553\registry.npmjs.org\react-addons-css-transition-group\-\react-addons-css-transition-group-15.2.0.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for react-addons-css-transition-group@15.2.0
+67 silly cache afterAdd react-addons-css-transition-group@15.2.0
+68 verbose afterAdd C:\Users\Gebruiker\AppData\Roaming\npm-cache\react-addons-css-transition-group\15.2.0\package\package.json not in flight; writing
+69 verbose afterAdd C:\Users\Gebruiker\AppData\Roaming\npm-cache\react-addons-css-transition-group\15.2.0\package\package.json written
+70 silly install resolved [ { name: 'react-addons-css-transition-group',
+70 silly install resolved     version: '15.2.0',
+70 silly install resolved     main: 'index.js',
+70 silly install resolved     repository:
+70 silly install resolved      { type: 'git',
+70 silly install resolved        url: 'git+https://github.com/facebook/react.git' },
+70 silly install resolved     keywords: [ 'react', 'react-addon' ],
+70 silly install resolved     license: 'BSD-3-Clause',
+70 silly install resolved     dependencies: {},
+70 silly install resolved     peerDependencies: { react: '^15.2.0' },
+70 silly install resolved     description: 'This package provides the React CSSTransitionGroup add-on.',
+70 silly install resolved     bugs: { url: 'https://github.com/facebook/react/issues' },
+70 silly install resolved     homepage: 'https://github.com/facebook/react#readme',
+70 silly install resolved     _id: 'react-addons-css-transition-group@15.2.0',
+70 silly install resolved     _shasum: '3ce3002489fc08705ce77b929bf00376514236ad',
+70 silly install resolved     _resolved: 'https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz',
+70 silly install resolved     _from: 'react-addons-css-transition-group@*',
+70 silly install resolved     scripts: {},
+70 silly install resolved     _npmVersion: '2.15.5',
+70 silly install resolved     _nodeVersion: '4.4.5',
+70 silly install resolved     _npmUser: { name: 'zpao', email: 'paul@oshannessy.com' },
+70 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+70 silly install resolved     dist:
+70 silly install resolved      { shasum: '3ce3002489fc08705ce77b929bf00376514236ad',
+70 silly install resolved        tarball: 'https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.2.0.tgz' },
+70 silly install resolved     _npmOperationalInternal:
+70 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+70 silly install resolved        tmp: 'tmp/react-addons-css-transition-group-15.2.0.tgz_1467399102817_0.9852273040451109' },
+70 silly install resolved     directories: {} } ]
+71 info install react-addons-css-transition-group@15.2.0 into C:\wamp\www\mytodo
+72 info installOne react-addons-css-transition-group@15.2.0
+73 verbose installOne of react-addons-css-transition-group to C:\wamp\www\mytodo not in flight; installing
+74 verbose lock using C:\Users\Gebruiker\AppData\Roaming\npm-cache\_locks\react-addons-css-transit-41d4176264f1894a.lock for C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+75 silly install write writing react-addons-css-transition-group 15.2.0 to C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+76 verbose unbuild node_modules\react-addons-css-transition-group
+77 silly gentlyRm C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group is being purged from base C:\wamp\www\mytodo
+78 verbose gentlyRm don't care about contents; nuking C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+79 verbose tar unpack C:\Users\Gebruiker\AppData\Roaming\npm-cache\react-addons-css-transition-group\15.2.0\package.tgz
+80 verbose tar unpacking to C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+81 silly gentlyRm C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group is being purged
+82 verbose gentlyRm don't care about contents; nuking C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+83 silly gunzTarPerm modes [ '777', '666' ]
+84 silly gunzTarPerm extractEntry package.json
+85 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+86 silly gunzTarPerm extractEntry README.md
+87 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+88 silly gunzTarPerm extractEntry LICENSE
+89 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+90 silly gunzTarPerm extractEntry index.js
+91 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+92 silly gunzTarPerm extractEntry PATENTS
+93 silly gunzTarPerm modified mode [ 'PATENTS', 420, 438 ]
+94 verbose write writing to C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group\package.json
+95 info preinstall react-addons-css-transition-group@15.2.0
+96 verbose readDependencies loading dependencies from C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group\package.json
+97 silly prepareForInstallMany adding react@^15.2.0 from react-addons-css-transition-group peerDependencies
+98 warn peerDependencies The peer dependency react@^15.2.0 included from react-addons-css-transition-group will no
+99 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+100 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+101 verbose readDependencies loading dependencies from C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group\package.json
+102 silly install resolved []
+103 verbose about to build C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+104 info build C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+105 info linkStuff react-addons-css-transition-group@15.2.0
+106 silly linkStuff react-addons-css-transition-group@15.2.0 has C:\wamp\www\mytodo\node_modules as its parent node_modules
+107 verbose linkBins react-addons-css-transition-group@15.2.0
+108 verbose linkMans react-addons-css-transition-group@15.2.0
+109 verbose rebuildBundles react-addons-css-transition-group@15.2.0
+110 info install react-addons-css-transition-group@15.2.0
+111 info postinstall react-addons-css-transition-group@15.2.0
+112 verbose readDependencies loading dependencies from C:\wamp\www\mytodo\package.json
+113 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel\package.json
+114 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-core\package.json
+115 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-loader\package.json
+116 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-plugin-transform-object-rest-spread\package.json
+117 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-preset-es2015\package.json
+118 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-preset-react\package.json
+119 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\babel-preset-react-hmre\package.json
+120 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\chai\package.json
+121 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\css-loader\package.json
+122 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\jshint\package.json
+123 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\mocha\package.json
+124 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\node-sass\package.json
+125 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react\package.json
+126 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group\package.json
+127 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react-dom\package.json
+128 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react-redux\package.json
+129 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react-router\package.json
+130 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\react-router-redux\package.json
+131 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\redux\package.json
+132 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\sass-loader\package.json
+133 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\style-loader\package.json
+134 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\webpack\package.json
+135 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\webpack-dev-server\package.json
+136 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\whatwg-fetch\package.json
+137 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel\package.json
+138 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel-external-helpers\package.json
+139 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel-external-helpers.cmd\package.json
+140 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel-node\package.json
+141 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel-node.cmd\package.json
+142 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\babel.cmd\package.json
+143 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\jshint\package.json
+144 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\jshint.cmd\package.json
+145 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\mocha\package.json
+146 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\mocha.cmd\package.json
+147 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\node-sass\package.json
+148 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\node-sass.cmd\package.json
+149 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\webpack\package.json
+150 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\webpack-dev-server\package.json
+151 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\webpack-dev-server.cmd\package.json
+152 verbose targetResolver reading package data from C:\wamp\www\mytodo\node_modules\.bin\webpack.cmd\package.json
+153 verbose already installed skipping react@^15.2.0 C:\wamp\www\mytodo
+154 silly install resolved []
+155 verbose unlock done using C:\Users\Gebruiker\AppData\Roaming\npm-cache\_locks\react-addons-css-transit-41d4176264f1894a.lock for C:\wamp\www\mytodo\node_modules\react-addons-css-transition-group
+156 verbose validateInstall loading C:\wamp\www\mytodo\package.json for validation
+157 verbose stack Error: The package react@15.1.0 does not satisfy its siblings' peerDependencies requirements!
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\lib\install.js:125:32
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\lib\install.js:268:7
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+157 verbose stack     at cb (C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+157 verbose stack     at cb (C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+157 verbose stack     at cb (C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+157 verbose stack     at C:\Users\Gebruiker\AppData\Roaming\npm\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+158 verbose cwd C:\wamp\www\mytodo
+159 error Windows_NT 6.2.9200
+160 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Gebruiker\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "i" "-D" "react-addons-css-transition-group"
+161 error node v4.0.0
+162 error npm  v2.13.4
+163 error code EPEERINVALID
+164 error peerinvalid The package react@15.1.0 does not satisfy its siblings' peerDependencies requirements!
+164 error peerinvalid Peer react-dom@15.1.0 wants react@^15.1.0
+164 error peerinvalid Peer react-redux@4.4.5 wants react@^0.14.0 || ^15.0.0-0
+164 error peerinvalid Peer react-router@2.4.1 wants react@^0.14.0 || ^15.0.0
+164 error peerinvalid Peer react-addons-css-transition-group@15.2.0 wants react@^15.2.0
+165 verbose exit [ 1, true ]

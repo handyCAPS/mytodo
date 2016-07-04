@@ -36,8 +36,8 @@ const Tasks = React.createClass({
                 <div className="task__list">{this.props.tasks.map((task, index) => (
                     <Task
                         {...this.props}
-                        ref="task"
                         key={index}
+                        ref="task"
                         index={index}
                         task={task}
                         setEditing={this.setEditing}
