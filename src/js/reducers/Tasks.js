@@ -4,8 +4,13 @@ import { addToLocalState, deleteFromLocalState, updateLocalState } from '../util
 function tasks(state = [], action) {
     switch (action.type) {
         case 'ADD_TODO':
-            addToLocalState("tasks", {text: action.text});
-            return state.concat({text: action.text});
+            const newOb = {
+                text: action.text,
+                timestamp: action.timestamp,
+                completed: action.completed
+            };
+            addToLocalState("tasks", newOb);
+            return state.concat(newOb);
         case 'DELETE_TODO':
             deleteFromLocalState("tasks", action.index);
             return state.filter((todo, i) => i !== action.index);
@@ -14,7 +19,6 @@ function tasks(state = [], action) {
             return state.map((taskObject, index) => {
                 if (index === action.index) {
                     taskObject.text = action.text;
-                    console.info('text', taskObject);
                     return taskObject;
                 }
                 return taskObject;

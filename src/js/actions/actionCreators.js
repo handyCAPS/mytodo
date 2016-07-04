@@ -1,9 +1,11 @@
 
 // Add todo
-export function addToDo(text) {
+export function addToDo(text, timestamp) {
     return {
         type: 'ADD_TODO',
-        text
+        text,
+        timestamp,
+        completed: false
     };
 }
 

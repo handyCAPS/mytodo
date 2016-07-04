@@ -11,7 +11,9 @@ const Form = React.createClass({
             this.refs.newtext.focus();
             return;
         }
-        this.props.addToDo(newText);
+        const timestamp = new Date().getTime();
+        console.log("time", timestamp);
+        this.props.addToDo(newText, timestamp);
         this.refs.newtextForm.reset();
         browserHistory.push('/tasks');
     },

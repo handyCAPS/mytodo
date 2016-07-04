@@ -19,6 +19,23 @@ const Task = React.createClass({
         this.props.editToDo(this.props.index, text);
         this.props.setEditing(this.props.index);
     },
+    setCompleted() {
+        console.info("complete: '", this.props.task);
+    },
+    formatDate(date) {
+        const theDate = new Date(date);
+        const theDay = theDate.getDate();
+        const theMonth = theDate.getMonth();
+        const theYear = theDate.getFullYear();
+        const theHours = theDate.getHours();
+        const theMinutes = theDate.getMinutes();
+        const dateString = theDay + '-' + 
+                            theMonth + '-' + 
+                            theYear + ' - ' +
+                            theHours + ':' +
+                            theMinutes;
+        return dateString;
+    },
     render() {
         const {
             index,
@@ -30,12 +47,11 @@ const Task = React.createClass({
 
         const isEditing = editing.active && (editing.index === index);
         const editTextRef = this.getEditTextRef();
-
         return (
             <div className="task__item"
                 key={index}
-                i={index}><p>
-                { isEditing  || task.text }
+                i={index}>
+                <p>{ isEditing  || task.text }</p>
                 { isEditing  &&
                     (
                         <form ref="editForm" onSubmit={this.handleUpdate}>
@@ -43,10 +59,11 @@ const Task = React.createClass({
                             <input type="submit" hidden/>
                         </form>
                     )
-                }</p>
+                }
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
                 <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
-                <button className="button">Complete</button>
+                <button className="button" onClick={this.setCompleted}>Complete</button>
+                <div className="timestamp">{this.formatDate(task.timestamp)}</div>
                 </div>
             );
     }
