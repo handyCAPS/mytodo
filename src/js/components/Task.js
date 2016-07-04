@@ -55,6 +55,7 @@ const Task = React.createClass({
 
         const isEditing = editing.active && (editing.index === index);
         const editTextRef = this.getEditTextRef();
+        const completeButtonText = (task.completed ? 'Unc' : 'C') + 'omplete';
         return (
             <div className="task__item"
                 key={index}
@@ -79,7 +80,7 @@ const Task = React.createClass({
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
                 <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
                 <div className="complete-wrap">
-                    <button className="btn btn--small task__complete-button" onClick={this.setCompleted}>Complete</button>
+                    <button className="btn btn--small task__complete-button" onClick={this.setCompleted}>{completeButtonText}</button>
                 </div>
             </div>
             );
