@@ -46,6 +46,7 @@ const Task = React.createClass({
                 }</p>
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
                 <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
+                <button className="button">Complete</button>
                 </div>
             );
     }

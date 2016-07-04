@@ -23,3 +23,10 @@ export function deleteToDo(index) {
         index
     };
 }
+
+export function completeToDo(index) {
+    return {
+        type: 'COMPLETE_TODO',
+        index
+    };
+}
