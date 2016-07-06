@@ -3,24 +3,25 @@
     padding: 1rem 0;
     margin: 0;
     list-style: none;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    /* justify-content: space-between;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .task__item {
     position: relative;
-    -ms-flex-preferred-size: calc(25% - #{modScale(-1) * 2 + em});
-        flex-basis: calc(25% - #{modScale(-1) * 2 + em});
+    -ms-flex-preferred-size: calc(25% - #{modScale(0) + em});
+        flex-basis: calc(25% - #{modScale(0) + em});
     display: inline-block;
     font-size: 1rem;
     padding: modScale(1) + em;
-    margin: modScale(1) + em modScale(-1) + em modScale(-1) + em;
+    margin: 0 modScale(0) + em 0 0;
     border: 1px solid $baseColor;
     width: modScale(6) + rem;
     vertical-align: top;
+        &:nth-of-type(4n+4) {
+            margin-right: 0;
+        }
 }
 
 .task__text {
@@ -44,6 +45,7 @@
     position: absolute;
     right: 6px;
     cursor: pointer;
+    user-select: none;
 }
 
 .complete-wrap {

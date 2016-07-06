@@ -64,8 +64,7 @@ const Task = React.createClass({
         const completeButtonText = (task.completed ? 'Unc' : 'C') + 'omplete';
         return (
             <div className="task__item"
-                key={index}
-                i={index}>
+                key={index}>
                 <ReactCSSTransitionGroup  transitionName="checkmark" transitionEnterTimeout={1300} transitionLeaveTimeout={1300} >
                 { task.completed && (
                                         <span className="checkmark" key={index}>&#x02713;</span>

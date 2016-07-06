@@ -1,5 +1,7 @@
 const path = require('path');
 
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
 
     entry: './src/js/index.js',
@@ -30,13 +32,16 @@ module.exports = {
       // scss
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
+        loaders: ['style', 'css', 'postcss', 'sass'],
         exclude: /node_modules/
       }
       ]
     },
     sassLoader: {
       // includePaths: [ path.join(__dirname, 'src/scss')]
+    },
+    postcss: function() {
+      return [autoprefixer];
     }
 
 };
