@@ -15,7 +15,7 @@
     display: inline-block;
     font-size: 1rem;
     padding: modScale(1) + em;
-    margin: 0 modScale(0) + em 0 0;
+    margin: 0 modScale(0) + em modScale(0) + em 0;
     border: 1px solid $baseColor;
     width: modScale(6) + rem;
     vertical-align: top;
