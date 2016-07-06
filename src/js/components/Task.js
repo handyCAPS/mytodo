@@ -16,13 +16,19 @@ const Task = React.createClass({
         }
     },
     handleUpdate(event) {
-        event.preventDefault();
+        if (event) { event.preventDefault(); }
         const input = this.refs[this.getEditTextRef()];
         const text = ReactDOM.findDOMNode(input).value;
-        this.props.editToDo(this.props.index, text);
+        this.props.editToDo(this.props.index, {text});
         this.props.setEditing(this.props.index);
     },
+    handleKeyDown(event) {
+        const key = event.which;
+        if (!event.ctrlKey || key !== 13) { return; }
+        this.handleUpdate();
+    },
     setCompleted() {
+        console.log("Task", this.props.task);
         this.props.completeToDo(this.props.index, !this.props.task.completed);
     },
     formatDate(date) {
@@ -30,7 +36,7 @@ const Task = React.createClass({
         let dateString = '';
         if (!isNaN(theDate.getMinutes())) {
             const theDay = theDate.getDate();
-            const theMonth = theDate.getMonth();
+            const theMonth = parseInt(theDate.getMonth()) + 1;
             const theYear = theDate.getFullYear();
             const theHours = theDate.getHours();
             const theMinutes = theDate.getMinutes();
@@ -70,13 +76,13 @@ const Task = React.createClass({
                     (
                         <div className="task__text">
                             <form ref="editForm" onSubmit={this.handleUpdate}>
-                                <input ref={editTextRef} defaultValue={task.text} type="text" className="editForm__input" />
+                                <textarea rows="1" ref={editTextRef} defaultValue={task.text} className="editForm__input" onKeyDown={this.handleKeyDown} ></textarea>
                                 <input type="submit" hidden/>
                             </form>
                         </div>
                     )
                 }
-                <div className="timestamp">{this.formatDate(task.timestamp)}</div>
+                <div className="timestamp">{this.formatDate(task.dueDate)}</div>
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
                 <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
                 <div className="complete-wrap">

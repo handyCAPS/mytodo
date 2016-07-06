@@ -7,6 +7,7 @@ function tasks(state = [], action) {
             const newOb = {
                 text: action.text,
                 timestamp: action.timestamp,
+                dueDate: action.dueDate,
                 completed: action.completed
             };
             addToLocalState("tasks", newOb);
@@ -15,10 +16,10 @@ function tasks(state = [], action) {
             deleteFromLocalState("tasks", action.index);
             return state.filter((todo, i) => i !== action.index);
         case 'EDIT_TODO':
-            updateLocalState("tasks", action.index, {text: action.text});
+            updateLocalState("tasks", action.index, action.newObject);
             return state.map((taskObject, index) => {
                 if (index === action.index) {
-                    taskObject.text = action.text;
+                    taskObject = {...taskObject, ...action.newObject};
                     return taskObject;
                 }
                 return taskObject;
