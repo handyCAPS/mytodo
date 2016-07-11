@@ -9,7 +9,6 @@ const TypeFilter = React.createClass({
         }
     },
     isCurrentFilter(filter) {
-        console.log("Current filter:", this.props.visibilityFilter);
         return filter === this.props.visibilityFilter;
     },
     render() {

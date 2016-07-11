@@ -7,7 +7,8 @@ import Main from './components/Main';
 function mapStateToProps(state) {
     return {
         tasks: state.tasks,
-        visibilityFilter: state.VisibilityFilter
+        visibilityFilter: state.VisibilityFilter,
+        editing: state.Editing
     };
 }
 

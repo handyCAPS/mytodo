@@ -10,7 +10,11 @@ import { getLocalState } from './util/localstorage';
 
 const defaultState = {
     tasks: getLocalState("tasks"),
-    VisibilityFilter: 'SHOW_ALL'
+    VisibilityFilter: 'SHOW_ALL',
+    Editing: {
+        active: false,
+        index: null
+    }
 };
 
 const Store = createStore(rootReducer, defaultState);

@@ -41,3 +41,11 @@ export function changeVisibilityFilter(filter) {
         filter
     };
 }
+
+export function setEditing(active, index) {
+    return {
+        type: 'CHANGE_EDITING',
+        active,
+        index
+    };
+}

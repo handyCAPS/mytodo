@@ -15,14 +15,6 @@ const Tasks = React.createClass({
         node.selectionStart = 0;
         node.selectionEnd = node.value.length;
     },
-    getInitialState() {
-        return {
-            editing: {
-                active: false,
-                index: null
-            }
-        };
-    },
     getFilteredTasks() {
         const filter = this.props.visibilityFilter;
         return this.props.tasks.filter(task => {
@@ -38,14 +30,10 @@ const Tasks = React.createClass({
             }
         });
     },
-    setEditing(index) {
-        const active = index === this.state.editing.index ? !this.state.editing.active : true;
-        this.setState({
-            editing: {
-                active,
-                index
-            }
-        });
+    changeEditing(index) {
+        console.log("Editing:" , this.props.editing);
+        const active = index === this.props.editing.index ? !this.props.editing.active : true;
+        this.props.setEditing(active, index);
     },
     render() {
         const filteredTasks = this.getFilteredTasks();
@@ -60,9 +48,9 @@ const Tasks = React.createClass({
                             ref="task"
                             index={index}
                             task={task}
-                            setEditing={this.setEditing}
+                            changeEditing={this.changeEditing}
                             selectAndFocus={this.selectAndFocus}
-                            editing={this.state.editing} />
+                            editing={this.props.editing} />
                         );
                 })}</div>
             </div>

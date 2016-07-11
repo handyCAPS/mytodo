@@ -28,7 +28,6 @@ const Task = React.createClass({
         this.handleUpdate();
     },
     setCompleted() {
-        console.log("Task", this.props.task);
         this.props.completeToDo(this.props.index, !this.props.task.completed);
     },
     formatDate(date) {
@@ -54,10 +53,9 @@ const Task = React.createClass({
             editing,
             task,
             deleteToDo,
-            setEditing
+            changeEditing
         } = this.props;
 
-        // if (task.completed) { return null; }
 
         const isEditing = editing.active && (editing.index === index);
         const editTextRef = this.getEditTextRef();
@@ -83,7 +81,7 @@ const Task = React.createClass({
                 }
                 <div className="timestamp">{this.formatDate(task.dueDate)}</div>
                 <span className="button--task closeX" onClick={deleteToDo.bind(null, index)}>&times;</span>
-                <span className="button--task edit" onClick={setEditing.bind(null, index)}>&Xi;</span>
+                <span className="button--task edit" onClick={changeEditing.bind(null, index)}>&Xi;</span>
                 <div className="complete-wrap">
                     <button className="btn btn--small task__complete-button" onClick={this.setCompleted}>{completeButtonText}</button>
                 </div>
