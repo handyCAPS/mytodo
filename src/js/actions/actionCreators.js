@@ -34,3 +34,10 @@ export function completeToDo(index, completed) {
         completed
     };
 }
+
+export function changeVisibilityFilter(filter) {
+    return {
+        type: 'CHANGE_FILTER',
+        filter
+    };
+}

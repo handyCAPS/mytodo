@@ -44,7 +44,7 @@ const Form = React.createClass({
                 <form ref="newtextForm">
                     <p className="input-group">
                         <label htmlFor="text" className="input-group__label">Text</label>
-                        <textarea ref="newtext" name="text" id="" cols="30" rows="10" className="input-group__text-area input-group__input" onKeyDown={this.handleKeyDown}></textarea>
+                        <textarea ref="newtext" name="text" id="" cols="30" rows="10" className="input-group__textarea input-group__input" onKeyDown={this.handleKeyDown}></textarea>
                     </p>
                     <p className="input-group">
                         <label htmlFor="dueDate" className="input-group__label">Einddatum</label>

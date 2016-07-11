@@ -1,24 +1,24 @@
 
+$taskTextHeight: modScale(4) + em;
+
+
 .task__list {
     padding: 1rem 0;
     margin: 0;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .task__item {
+    $marginRight: modScale(1);
     position: relative;
-    -ms-flex-preferred-size: calc(25% - #{modScale(0) + em});
-        flex-basis: calc(25% - #{modScale(0) + em});
+    width: calc(25% - #{($marginRight - $marginRight / 4) + em});
     display: inline-block;
     font-size: 1rem;
     padding: modScale(1) + em;
-    margin: 0 modScale(0) + em modScale(0) + em 0;
-    border: 1px solid $baseColor;
-    width: modScale(6) + rem;
+    margin: 0 $marginRight + em modScale(0) + em 0;
+    // border: 1px solid $baseColor;
     vertical-align: top;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.07);
         &:nth-of-type(4n+4) {
             margin-right: 0;
         }
@@ -27,6 +27,9 @@
 .task__text {
     margin: 0 0 modScale(1) + rem;
     padding: 4px 0;
+    padding-bottom: 2rem;
+    line-height: 1.5;
+    height: $taskTextHeight;
 }
 
 .task__complete-button {
@@ -41,11 +44,27 @@
 }
 
 .button--task {
+    $buttonColor: #C9C9C9;
     font-size: modScale(1) + rem;
     position: absolute;
     right: 6px;
     cursor: pointer;
     user-select: none;
+    color: $buttonColor;
+    transition: 0.3s;
+        &:hover, &:focus {
+            color: darken($buttonColor, 20);
+        }
+}
+
+.task__form-wrap {
+    position: relative;
+}
+
+.task__submit {
+    position: absolute;
+    top: calc(#{$taskTextHeight} - #{modScale(-1) + rem});
+    right: 0;
 }
 
 .complete-wrap {
@@ -91,4 +110,12 @@
 
 .checkmark-enter.checkmark-enter-active {
     opacity: 1;
+}
+
+.type-wrap {
+    // width: 20rem;
+}
+
+.button-wrap {
+    margin-bottom: modScale(1) + rem;
 }

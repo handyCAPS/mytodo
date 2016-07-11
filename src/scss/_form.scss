@@ -18,21 +18,51 @@
         }
 }
 
+.input-group__label, .input-group__input {
+    vertical-align: middle;
+}
+
 .input-group__label {
     display: inline-block;
     width: 30%;
     text-align: right;
     padding: 0 modScale(1) + em;
+    cursor: pointer;
 }
 
 .input-group__input {
     width: 70%;
 }
 
-.input-group__text-area {
-    width: 70%;
+.input-group__textarea {
+    border: 1px solid lightgrey !important;
+}
+
+.input-group__input--radio {
+    text-align: left;
+    cursor: pointer;
 }
 
 .form__button {
     float: right;
+}
+
+.radioButton {
+    cursor: pointer;
+    background-color: $btnColor-main;
+    display: inline-block;
+    width: modScale(5) + rem;
+    margin-right: 1rem;
+        > input {
+            display: none;
+                &:checked ~ label {
+                    background-color: lighten($btnColor-main, 30);
+                }
+        }
+        > label {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            color: white;
+        }
 }

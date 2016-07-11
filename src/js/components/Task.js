@@ -73,10 +73,10 @@ const Task = React.createClass({
                 { isEditing  || (<p className="task__text">{task.text}</p>) }
                 { isEditing  &&
                     (
-                        <div className="task__text">
+                        <div className="task__form-wrap">
                             <form ref="editForm" onSubmit={this.handleUpdate}>
-                                <textarea rows="1" ref={editTextRef} defaultValue={task.text} className="editForm__input" onKeyDown={this.handleKeyDown} ></textarea>
-                                <input type="submit" hidden/>
+                                <textarea ref={editTextRef} defaultValue={task.text} className="editForm__input input-group__textarea task__text" onKeyDown={this.handleKeyDown} ></textarea>
+                                <input type="submit" className="task__submit btn btn--small" value="Save" />
                             </form>
                         </div>
                     )
