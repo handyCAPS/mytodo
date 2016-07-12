@@ -39,18 +39,18 @@
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.9.1",
-    "react-addons-css-transition-group": "^15.2.0",
     "sass-loader": "^3.2.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react": "^15.2.0",
-    "react-dom": "^15.2.0",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.1",
     "react-router-redux": "^4.0.5",
+    "react-addons-css-transition-group": "^15.2.0",
     "redux": "^3.5.2",
     "whatwg-fetch": "^1.0.0"
   }

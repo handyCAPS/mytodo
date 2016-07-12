@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ReactTransitionGroup from 'react-addons-transition-group';
+
 import Task from './Task';
 
 import TypeFilter from './TypeFilter';
@@ -41,6 +43,7 @@ const Tasks = React.createClass({
             <div className="task">
                 <TypeFilter {...this.props} />
                 <div className="task__list">{filteredTasks.map((task, index) => {
+                    const isEditing = this.props.editing.active && (this.props.editing.index === index);
                     return (
                         <Task
                             {...this.props}
@@ -50,7 +53,7 @@ const Tasks = React.createClass({
                             task={task}
                             changeEditing={this.changeEditing}
                             selectAndFocus={this.selectAndFocus}
-                            editing={this.props.editing} />
+                            isEditing={isEditing} />
                         );
                 })}</div>
             </div>

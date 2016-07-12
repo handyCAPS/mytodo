@@ -2,15 +2,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-addons-transition-group';
 
+import Checkmark from './Checkmark';
 
 const Task = React.createClass({
     getEditTextRef() {
         return "editText" + this.props.index;
     },
     componentDidUpdate() {
-        if (this.props.editing.active && this.props.editing.index === this.props.index) {
+        if (this.props.isEditing) {
             const input = this.refs["editText" + this.props.editing.index];
             this.props.selectAndFocus(input);
         }
@@ -50,26 +51,26 @@ const Task = React.createClass({
     render() {
         const {
             index,
-            editing,
             task,
             deleteToDo,
-            changeEditing
+            changeEditing,
+            isEditing
         } = this.props;
 
 
-        const isEditing = editing.active && (editing.index === index);
+
         const editTextRef = this.getEditTextRef();
         const completeButtonText = (task.completed ? 'Unc' : 'C') + 'omplete';
         return (
             <div className="task__item"
                 key={index}>
-                <ReactCSSTransitionGroup  transitionName="checkmark" transitionEnterTimeout={1300} transitionLeaveTimeout={1300} >
+                <ReactTransitionGroup>
                 { task.completed && (
-                                        <span className="checkmark" key={index}>&#x02713;</span>
+                                        <Checkmark key={index} />
                                     ) }
-                </ReactCSSTransitionGroup>
+                </ReactTransitionGroup>
                 { isEditing  || (<p className="task__text">{task.text}</p>) }
-                { isEditing  &&
+                { !isEditing  ||
                     (
                         <div className="task__form-wrap">
                             <form ref="editForm" onSubmit={this.handleUpdate}>
